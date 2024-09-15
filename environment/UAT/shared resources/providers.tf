@@ -5,18 +5,18 @@ terraform {
       # version = "3.5"
     }
   }
-  #   backend "azurerm" {
-  #     resource_group_name  = "poc-rg-ae-dtu-u-01"
-  #     storage_account_name = "pocstrgdtuu02"
-  #     container_name       = "state-storage"
-  #     key                  = "UAT/shareresources.tfstate"
+    backend "azurerm" {
+      resource_group_name  = "Kali_group"
+      storage_account_name = "xcterraformmanagement01"
+      container_name       = "xc-tf-file"
+      key                  = "UAT/shareresources.tfstate"
 
-  #   }
+    }
 
 }
 
 provider "azurerm" {
-  subscription_id = "c687f2d5-fcab-4d21-82be-cec73ad7549f"
+  subscription_id = "307d9660-0ddb-42c6-a9a2-7a4abf960353"
   # skip_provider_registration = true # This is only required when the User, Service Principal, or Identity running Terraform lacks the permissions to register Azure Resource Providers.
   features {}
 }
